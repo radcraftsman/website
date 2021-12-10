@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Southampton';
+  src: url('/path-to/Southampton.woff2') format('woff2'),
+       url('/path-to/Southampton.woff') format('woff'),
+       url('/path-to/Southampton.ttf')  format('truetype');
+}
+
+body {
+  font-family: 'Southampton', sans-serif;
+}
