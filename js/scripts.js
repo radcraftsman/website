@@ -55,8 +55,12 @@
 		$(gallery).magnificPopup({
             delegate: 'a',
 			type:'image',
+            mainClass: 'mfp-img-mobile',
+            tLoading: 'Loading image ...',
 			gallery: {
-				enabled: true
+				enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
 			},
             titleSrc: 'title'
 		}).magnificPopup('open');
