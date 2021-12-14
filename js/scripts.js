@@ -58,7 +58,7 @@
 			gallery: {
 				enabled: true
 			},
-            titleSrc: 'title',
+            titleSrc: 'title'
 		}).magnificPopup('open');
 	});
 
