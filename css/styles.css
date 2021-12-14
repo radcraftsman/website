@@ -10046,9 +10046,9 @@ header.masthead h1 {
     padding-top: 4.5rem;
     padding-bottom: 0;
   }
-  header.masthead p {
+  /* header.masthead p {
     font-size: 1.15rem;
-  }
+  } */
 }
 
 #mainMast.mast-scrolled h1{
@@ -10182,4 +10182,5 @@ header.masthead h1 {
 
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
+  font-size: clamp(10px, 4vw, 30px);
 }
