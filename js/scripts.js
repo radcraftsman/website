@@ -53,11 +53,12 @@
 		var gallery = $(this).attr('href');
     
 		$(gallery).magnificPopup({
-      delegate: 'a',
+            delegate: 'a',
 			type:'image',
 			gallery: {
 				enabled: true
-			}
+			},
+            titleSrc: 'title',
 		}).magnificPopup('open');
 	});
 
