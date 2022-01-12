@@ -3,7 +3,7 @@
 if($_POST) {
     $name = "";
     $email = "";
-    $subject = "";
+    $subject = "Website Inquiry: Specific Table Ordered!";
     $table = "";
     $message = "";
     $recipient = "chas@radcraftsman.ca";

@@ -3,6 +3,7 @@
 if($_POST) {
     $name = "";
     $email = "";
+    $email_subject = "Website Inquiry: General Contact Form!"
     $subject = "";
     $message = "";
     $recipient = "chas@radcraftsman.ca";
@@ -26,7 +27,7 @@ if($_POST) {
     if(isset($_POST['subject'])) {
         $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
         $email_body .= "<div>
-                           <label><b>Reason For Contacting Us:</b></label>&nbsp;<span>".$subject."</span>
+                           <label><b>Subject of message:</b></label>&nbsp;<span>".$subject."</span>
                         </div>";
     }
      
@@ -44,7 +45,7 @@ if($_POST) {
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $email . "\r\n";
      
-    if(mail($recipient, $subject, $email_body, $headers)) {
+    if(mail($recipient, $email_subject, $email_body, $headers)) {
         $data['success'] = true;
         $data['message'] = "Thank you for contacting us, $name. You will get a reply within 24 hours";
         echo json_encode($data);
