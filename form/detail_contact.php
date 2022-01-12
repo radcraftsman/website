@@ -4,6 +4,7 @@ if($_POST) {
     $name = "";
     $email = "";
     $subject = "";
+    $table = "";
     $message = "";
     $recipient = "chas@radcraftsman.ca";
     $data = [];
@@ -23,18 +24,10 @@ if($_POST) {
                         </div>";
     }
      
-    if(isset($_POST['subject'])) {
-        $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    if(isset($_POST['table'])) {
+        $table = filter_var($_POST['table'], FILTER_SANITIZE_STRING);
         $email_body .= "<div>
-                           <label><b>Reason For Contacting Us:</b></label>&nbsp;<span>".$subject."</span>
-                        </div>";
-    }
-     
-    if(isset($_POST['message'])) {
-        $message = htmlspecialchars($_POST['message']);
-        $email_body .= "<div>
-                           <label><b>Visitor Message:</b></label>
-                           <div>".$message."</div>
+                           <label><b>The table that the customer inquired about:</b></label>&nbsp;<span>".$table."</span>
                         </div>";
     }
      
@@ -46,7 +39,7 @@ if($_POST) {
      
     if(mail($recipient, $subject, $email_body, $headers)) {
         $data['success'] = true;
-        $data['message'] = "Thank you for contacting us, $name. You will get a reply within 24 hours";
+        $data['message'] = "Thank you for contacting us, $name. We will get back to you within 24 hours";
         echo json_encode($data);
     } else {
         $data['success'] = false;
