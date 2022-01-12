@@ -3,7 +3,7 @@
 if($_POST) {
     $name = "";
     $email = "";
-    $email_subject = "Website Inquiry: General Contact Form!"
+    $email_subject = "Website Inquiry: General Contact Form!";
     $subject = "";
     $message = "";
     $recipient = "chas@radcraftsman.ca";
